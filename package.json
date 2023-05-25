@@ -1,0 +1,23 @@
+{
+  "name": "m18-nosql-social-network-api",
+  "version": "1.0.0",
+  "description": "This is social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. It uses Express.js for routing, a MongoDB database, and the Mongoose ODM. This is a part of the Module 18 Challenge associated for the Ohio Statue University Coding Bootcamp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChelseaLuevano/M18-NoSQL-Social-Network-API.git"
+  },
+  "author": "Chelsea Luevano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChelseaLuevano/M18-NoSQL-Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/ChelseaLuevano/M18-NoSQL-Social-Network-API#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.2.1"
+  }
+}
