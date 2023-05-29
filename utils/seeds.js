@@ -9,9 +9,11 @@ connection.once('open', async () => {
 
 
 // Drop existing Users
-await User.deleteMany({});
+// await User.deleteMany({});
+
+User.create({userName:"JamieTartt", email: "JamieTartt@gmail.com"})
 
 // Drop existing Thoughts
-await Thought.deleteMany({});
+// await Thought.deleteMany({});
 
 // const userData = [];

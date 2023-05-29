@@ -9,9 +9,9 @@ const routes = require('./routes');
 const cwd = process.cwd();
 
 // Note: not necessary for the Express server to function. This just helps indicate what activity's server is running in the terminal.
-const activity = cwd.includes('01-Activities')
-  ? cwd.split('/01-Activities/')[1]
-  : cwd;
+// const activity = cwd.includes('01-Activities')
+//   ? cwd.split('/01-Activities/')[1]
+//   : cwd;
 
 const PORT = process.env.port || 3001;
 const app = express();

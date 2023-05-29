@@ -12,7 +12,6 @@ This is social network web application where users can share their thoughts, rea
 
 
 
-
 ## Technologies Used
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://www.ecma-international.org/ecma-262/)
 [![Node.js](https://img.shields.io/badge/Node.js-v14.17.0-green)](https://nodejs.org/)
