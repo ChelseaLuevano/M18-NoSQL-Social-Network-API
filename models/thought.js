@@ -17,7 +17,7 @@ const thoughtSchema = new Schema (
             default: Date.now,
             get: (createdAt) => createdAt.toISOString()
         },
-        user: {
+        userName: {
             type: Schema.Types.ObjectID,
             ref: 'user',
             required: true
