@@ -49,7 +49,7 @@ module.exports = {
     addThoughtReaction(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
-            { $addToSet: { responses.req.body }},
+            { $addToSet: { reactions: req.body }},
             { runValidators: true, new: true }
         )
             .then((thought) => 
@@ -61,6 +61,22 @@ module.exports = {
                 console.log(err);
                 res.status(500).json(err);
             })
+    },
+    // Remove a reaction 
+    removeThoughtReaction(req, res) {
+        Thought.findOneAndUpdate(
+            { _id: req.params.thoughtId },
+            { $pull: { reactions: {reactionId: req.params.reactionId} }},
+            { runValidators: true, new: true }
+        )
+        .then((thought) => 
+                !thought
+                ? res.status(404).json({ message: 'No thought with this id!'})
+                : res.json(thought)
+            )
+            .catch((err) => {
+                console.log(err);
+                res.status(500).json(err);
+            })
     }
-    // Remove a reaction from a thought
-}
+};

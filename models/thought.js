@@ -32,16 +32,16 @@ const thoughtSchema = new Schema (
     }
 );
 
-thoughtSchema.virtual('userName', {
-    ref: 'user',
-    localField: 'user',
-    foreignField: '_id',
-    justOne: true,
-    autopopulate: true,
-    options: { select: 'userName' }
-  });
+// thoughtSchema.virtual('userCount', {
+//     ref: 'user',
+//     localField: 'user',
+//     foreignField: '_id',
+//     justOne: true,
+//     autopopulate: true,
+//     options: { select: 'userName' }
+//   });
 
-  let reactionCount = thoughtSchema.virtual('reactions').get(function(){
+thoughtSchema.virtual('reactionCount').get(function(){
     return this.reactions.length
   });
 
