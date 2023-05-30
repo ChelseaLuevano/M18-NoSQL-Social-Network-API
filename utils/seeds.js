@@ -15,6 +15,8 @@ connection.once('open', async () => {
 
     // Drop existing Thoughts
     await Thought.deleteMany({});
+
+
     console.log(userData)
     try {
         await User.insertMany(userData);
@@ -22,12 +24,19 @@ connection.once('open', async () => {
       } catch (error) {
         console.error('Error seeding user data:', error);
       }
-    
-    for (const user of userData) {
-        await User.create(user);
-      }
 
-      for (const user of thoughtData) {
-        await Thought.create(thought);
+      try {
+        await Thought.insertMany(thoughtData);
+        console.log('Thought data seeded successfully.');
+      } catch (error) {
+        console.error('Error seeding user data:', error);
       }  
+    
+//     for (const user of userData) {
+//         await User.create(user);
+//       }
+
+//       for (const user of thoughtData) {
+//         await Thought.create(thought);
+//       }  
 });
