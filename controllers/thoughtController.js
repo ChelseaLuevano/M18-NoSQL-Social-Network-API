@@ -44,7 +44,28 @@ module.exports = {
             });       
     },
     // Delete a thought and remove their reactions
-
+    deleteThought (req, res) {
+        Thought.findOneAndRemove({ _id: req.params.thoughtId })
+            .then((thought) =>
+                !thought
+                ? res.status(404).json({ message: 'No thought with this id'})
+                : Thought.findOneAndUpdate (
+                    { thoughts: req.params.thoughtId },
+                    { $pull: { thoughts: req.params.thoughtId}},
+                    { new: true }
+                )
+            )        
+            .then((thought) => 
+                !thought
+                    ? res
+                        .status(404).json({ message: 'Thought created but no reaction with this id'})
+                    : res.json({ message: 'Thought successfully deleted '})
+            ) 
+            .catch((err) => {
+                console.log(err);
+                res.status(500).json(err);
+            });       
+    },
     // Add a reaction to a thought
     addThoughtReaction(req, res) {
         Thought.findOneAndUpdate(
