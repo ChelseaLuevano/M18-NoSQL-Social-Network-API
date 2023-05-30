@@ -28,3 +28,5 @@ const userData = [
         friendCount: [3]
     },
 ]
+
+module.exports = userData;

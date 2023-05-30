@@ -93,3 +93,5 @@ const thoughtData = [
         reactionCount: 0
     },
 ]
+
+module.exports = thoughtData;
