@@ -8,7 +8,7 @@ const thoughtData = [
         userName: "TedLasso",
         reactions: [
             {
-                reactionId: 1,
+                reactionId: ObjectId(1),
                 reactionBody: "Well said!",
                 userName: "CoachBeard",
                 createdAt: "Jun 1st, 2022 at 12:00 PM",
@@ -22,7 +22,7 @@ const thoughtData = [
         userName: "TedLasso",
         reactions: [
             {
-                reactionId: 2,
+                reactionId: ObjectId(2),
                 reactionBody: "Let's Believe Guys!",
                 userName: "KeelyJones",
                 createdAt: "Jun 10st, 2022 at 1:12 PM",
@@ -48,7 +48,8 @@ const thoughtData = [
         thoughtText: "We just had a five-hour bus ride where you didn’t talk a lick, and that’s a record by about five hours.",
         createdAt: "Jun 3rd, 2022 at 7:00 PM",
         userName: "CoachBeard",
-        reactions: []
+        reactions: [],
+        reactionCount: 0
     },
     {
         thoughtText: "You deserve someone who makes you feel like you've been struck by f***ing lightning— Don't you dare settle for fine!",
@@ -56,7 +57,7 @@ const thoughtData = [
         userName: "RoyKent",
         reactions: [
             {
-                reactionId: 3,
+                reactionId: ObjectId(3),
                 reactionBody: "Roy, you are such a sweetheart!",
                 userName: "KeelyJones",
                 createdAt: "Aug 3rd, 2022 at 11:00 AM",

@@ -1,30 +1,32 @@
+const { ObjectId } = require('mongoose').Types;
+
 const userData = [
     {
         userName: "TedLasso",
         email: "TedLasso@gmail.com",
-        thoughts: [ 1, 2, 3] ,
-        friends: [2, 3, 4],
+        thoughts: [ ObjectId(1), ObjectId(2), ObjectId(3)] ,
+        friends: [ObjectId(2), ObjectId(3), ObjectId(4)],
         friendCount: [3]
     },
     {
         userName: "CoachBeard",
         email: "CoachBeard@gmail.com",
-        thoughts: [ 4, 5] ,
-        friends: [1, 3],
+        thoughts: [ ObjectId(4), ObjectId(5)] ,
+        friends: [ObjectId(1), ObjectId(3)],
         friendCount: [2]
     },
     {
         userName: "RoyKent",
         email: "RoyKent@gmail.com",
-        thoughts: [ 6, 7, 8] ,
-        friends: [1, 2, 4],
+        thoughts: [ ObjectId(6), ObjectId(7), ObjectId(8)] ,
+        friends: [ObjectId(1), ObjectId(2), ObjectId(4)],
         friendCount: [3]
     },
     {
         userName: "KeelyJones",
         email: "KeelyJones@gmail.com",
-        thoughts: [ 9 , 10] ,
-        friends: [1, 2, 3],
+        thoughts: [ ObjectId(9) , ObjectId(10)] ,
+        friends: [ObjectId(1), ObjectId(2), ObjectId(3)],
         friendCount: [3]
     },
 ]
