@@ -1,4 +1,4 @@
-// not sure if I need this file
+const { ObjectId } = require('mongoose').Types;
 
 
 const thoughtData = [
@@ -8,7 +8,7 @@ const thoughtData = [
         userName: "TedLasso",
         reactions: [
             {
-                reactionId: ObjectId(1),
+                reactionId: new ObjectId(1),
                 reactionBody: "Well said!",
                 userName: "CoachBeard",
                 createdAt: "Jun 1st, 2022 at 12:00 PM",
@@ -22,7 +22,7 @@ const thoughtData = [
         userName: "TedLasso",
         reactions: [
             {
-                reactionId: ObjectId(2),
+                reactionId: new ObjectId(2),
                 reactionBody: "Let's Believe Guys!",
                 userName: "KeelyJones",
                 createdAt: "Jun 10st, 2022 at 1:12 PM",
@@ -57,7 +57,7 @@ const thoughtData = [
         userName: "RoyKent",
         reactions: [
             {
-                reactionId: ObjectId(3),
+                reactionId: new ObjectId(3),
                 reactionBody: "Roy, you are such a sweetheart!",
                 userName: "KeelyJones",
                 createdAt: "Aug 3rd, 2022 at 11:00 AM",
