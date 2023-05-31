@@ -18,8 +18,7 @@ const thoughtSchema = new Schema (
             get: (createdAt) => createdAt.toISOString()
         },
         userName: {
-            type: Schema.Types.ObjectID,
-            ref: 'user',
+            type: String,
             required: true
         },
         reactions: [reactionSchema]

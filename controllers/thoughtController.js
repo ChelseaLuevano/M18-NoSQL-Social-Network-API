@@ -48,7 +48,7 @@ module.exports = {
         Thought.findOneAndRemove({ _id: req.params.thoughtId })
             .then((thought) =>
                 !thought
-                ? res.status(404).json({ message: 'No thought with this id'})
+                ? res.status(404).json({ message: 'No thought with this id' })
                 : Thought.findOneAndUpdate (
                     { thoughts: req.params.thoughtId },
                     { $pull: { thoughts: req.params.thoughtId}},

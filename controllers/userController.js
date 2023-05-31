@@ -2,7 +2,6 @@ const { ObjectId } = require('mongoose').Types;
 const { User, Thought } = require('../models');
 
 
-
 module.exports = {
     // Get all users
     getUsers(req, res) {
@@ -52,7 +51,23 @@ module.exports = {
             });
     },
     // Remove a friend from a user's friend list
-
+    removeFriend(req, res) {
+        User.findOneAndRemove({ _id: req.params.userId })
+            .then((user) => 
+            !user
+            ? res.status(404).json({ message: 'No user with this id' })
+            : User.findOneAndUpdate (
+                    { users: req.params.userId },
+                    { $pull: { users: req.params.userId }},
+                    { new: true}
+                )
+            )
+            .then((user) =>
+                !user
+                    ? res.status(404).json({ message: 'User created but no friend with this Id'})
+                    : res.json({ message: 'User successfully deleted'})
+            )
+    },
     // Delete a user and associated thoughts
     deleteUser(req, res) {
         User.findOneAndRemove ({ _id: req.params.userId })
