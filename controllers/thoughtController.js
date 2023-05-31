@@ -10,7 +10,7 @@ module.exports = {
         .catch((err) => res.status(500).json(err))
     },
     // Get a single thought
-    getSingleThought(res,res) {
+    getSingleThought(req,res) {
         Thought.findOne({_id: req.params.userId})
         .select('-__v')
         .then((thought) => 
