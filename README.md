@@ -27,7 +27,7 @@ This is social network web application where users can share their thoughts, rea
 Since this application has no user interface, you will need to use Insomnia tool to interact. In Insomnia, you will be able to find, create, update, and delete users and thoughts data.
 
 ## Project Links
-Demo Video: 
+Demo Video: https://drive.google.com/file/d/1JkmP-vZiBVeCKE8OLtHaGn3zTjoJv2qU/view
 
 Github Repository: https://github.com/ChelseaLuevano/M18-NoSQL-Social-Network-API 
 
