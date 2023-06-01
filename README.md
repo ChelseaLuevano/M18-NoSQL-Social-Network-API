@@ -16,12 +16,14 @@ This is social network web application where users can share their thoughts, rea
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://www.ecma-international.org/ecma-262/)
 [![Node.js](https://img.shields.io/badge/Node.js-v14.17.0-green)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express.js-v4.17.1-lightgrey)](https://expressjs.com/)
+[![Mongoose](https://img.shields.io/badge/Mongoose-v6.0.12-pink)](https://mongoosejs.com/)
 
 
 ## Installation
 1. Run "npm i" to install project dependencies.
-2. Run "npm start" to create the database.
-3. Run "db/seeds" to initialize the database.
+2. Run " node utils/seeds" to initialize the database.
+3. Run "npm start" to create the database.
+
 
 ## Usage
 Since this application has no user interface, you will need to use Insomnia tool to interact. In Insomnia, you will be able to find, create, update, and delete users and thoughts data.
