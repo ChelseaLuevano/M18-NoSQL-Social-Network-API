@@ -11,7 +11,7 @@ module.exports = {
     },
     // Get a single thought
     getSingleThought(req,res) {
-        Thought.findOne({_id: req.params.userId})
+        Thought.findOne({_id: req.params.thoughtId})
         .select('-__v')
         .then((thought) => 
             !thought 
@@ -58,7 +58,7 @@ module.exports = {
             .then((thought) => 
                 !thought
                     ? res
-                        .status(404).json({ message: 'Thought created but no reaction with this id'})
+                        .status(404).json({message: "I am not sure what to put here"})
                     : res.json({ message: 'Thought successfully deleted '})
             ) 
             .catch((err) => {
