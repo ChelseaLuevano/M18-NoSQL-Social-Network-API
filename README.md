@@ -7,7 +7,6 @@ This is social network web application where users can share their thoughts, rea
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Links](#project-links)
-- [License](#license)
 - [Questions](#questions)
 
 
@@ -33,8 +32,6 @@ Demo Video: https://drive.google.com/file/d/1HNHvJEtsROa_q2AxNwgwosl-0VRkD0Vr/vi
 
 Github Repository: https://github.com/ChelseaLuevano/M18-NoSQL-Social-Network-API 
 
-## License 
-[![ISC]https://img.shields.io/badge/license-ISC-blue.svg 
 
 ## Questions
 
